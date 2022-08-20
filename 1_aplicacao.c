@@ -45,10 +45,10 @@ int login (){
 	printf("\nUsuario...: ");
 	scanf("%s", &input);
 	printf("Entrou com %s, atual eh %s.", input, username);
-	if(input == username) {
+	if(!(strcmp(input,username))) {
 		printf("\nSenha...: ");
 		scanf("%s", input);
-		if(input == pwd) {
+		if(!(strcmp(input,pwd))) {
 			printf("Entrou com Sucesso!");
 		} else printf("Senha Incorreta!");
 	} else printf("Usuario Invalido!");
